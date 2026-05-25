@@ -1,48 +1,47 @@
 # EvalScope Benchmark MCP
 
-EvalScope Benchmark MCP is a hosted remote MCP for AI SDK benchmark dashboard.
+Hosted MCP for AI SDK benchmark dashboard.
 
-This repository is a public documentation project for EvalScope Benchmark MCP. Its structure follows the public documentation pattern used by [MiroFish](https://github.com/clauxel/MiroFish): a short front door, a clear reading order, practical guides, reference pages, and a public-safe boundary.
+EvalScope Benchmark MCP is a paid remote MCP endpoint for AI SDK benchmark dashboard. It exposes structured JSON tools, a public server card, token-based access, usage receipts, and audit-ready workflow evidence for AI agents and coding teams.
 
-## Start Here
+## Public Endpoints
 
-- Website: https://evalscopebench.clauxel.com/?utm_source=github&utm_medium=documentation&utm_campaign=evalscopebench_public_docs&utm_content=readme_home
-- Pricing: https://evalscopebench.clauxel.com/pricing/?utm_source=github&utm_medium=documentation&utm_campaign=evalscopebench_public_docs&utm_content=readme_pricing
-- Checkout: https://evalscopebench.clauxel.com/checkout/?utm_source=github&utm_medium=documentation&utm_campaign=evalscopebench_public_docs&utm_content=readme_checkout
-- Support: support@aigeamy.com
-
-## Remote MCP
-
-- Endpoint: https://evalscopebench.clauxel.com/mcp
-- Server card: https://evalscopebench.clauxel.com/server-card.json
+- Website: https://evalscopebench.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605r25
+- MCP endpoint: https://evalscopebench.clauxel.com/mcp
+- Server card: https://evalscopebench.clauxel.com/.well-known/mcp/server-card.json
 - Registry name: `com.clauxel.evalscopebench/evalscopebench-mcp`
-- Tools: `run_benchmark_gate`, `compare_model_scores`, `read_benchmark_report`, `issue_benchmark_receipt`
 
-## Reading Order
+## Access
 
-1. [Quickstart](guide/quickstart.md)
-2. [Evaluation guide](guide/evaluation.md)
-3. [Checkout and pricing](guide/checkout-and-pricing.md)
-4. [Workflow notes](features/workflow.md)
-5. [Security model](features/security-model.md)
-6. [Public link reference](reference/links.md)
+This is a paid hosted remote MCP. Production calls require a bearer token issued from the product website.
 
-## Audience
+```http
+Authorization: Bearer <token>
+```
 
-AI governance teams, policy reviewers, trust and safety leads, and compliance operators.
+Unauthenticated browser visits to `/mcp` return a clear JSON error instead of internal details.
 
-## Capabilities
+## Tools
 
-- Streamable HTTP MCP endpoint
-- Bearer-token access for production calls
-- Structured tool-call output
-- Receipt-oriented evidence export
-- Public server card and registry metadata
-- MCP tool: run_benchmark_gate
-- MCP tool: compare_model_scores
-- MCP tool: read_benchmark_report
-- MCP tool: issue_benchmark_receipt
+- `run_benchmark_gate`
+- `compare_model_scores`
+- `read_benchmark_report`
+- `issue_benchmark_receipt`
 
-## Public-Safe Boundary
+## Quick Start
 
-This repository contains documentation only. It does not contain production source code, credentials, payment configuration, Cloudflare configuration, customer records, private analytics, or local machine paths.
+1. Open the website and choose a plan.
+2. Create or request an API token.
+3. Add the endpoint to an MCP client that supports Streamable HTTP remote servers.
+4. Send JSON-RPC requests with the bearer token.
+
+## Useful Links
+
+- Product page: https://evalscopebench.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605r25
+- Pricing: https://evalscopebench.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605r25#pricing
+- Server card: https://evalscopebench.clauxel.com/.well-known/mcp/server-card.json
+- MCP endpoint: https://evalscopebench.clauxel.com/mcp
+
+## Status
+
+This repository is a public documentation and directory-submission reference for the hosted service. It does not contain the private production source code.
