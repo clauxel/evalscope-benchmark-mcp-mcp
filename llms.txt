@@ -1,0 +1,15 @@
+# EvalScope Benchmark MCP
+
+EvalScope Benchmark MCP is a hosted remote MCP for AI SDK benchmark dashboard.
+
+Website: https://evalscopebench.clauxel.com/
+Docs pattern reference: https://github.com/clauxel/MiroFish
+Primary keyword: AI SDK benchmark dashboard
+Type: MCP
+Default plan: team
+MCP endpoint: https://evalscopebench.clauxel.com/mcp
+Server card: https://evalscopebench.clauxel.com/server-card.json
+Registry name: com.clauxel.evalscopebench/evalscopebench-mcp
+Tools: run_benchmark_gate, compare_model_scores, read_benchmark_report, issue_benchmark_receipt
+
+Public boundary: docs-only repository; no production source code or secrets.
