@@ -1,0 +1,25 @@
+{
+  "error": "Error: server card fetch failed 522",
+  "fallback": {
+    "slug": "evalscopebench",
+    "name": "EvalScope Benchmark MCP",
+    "website": "https://evalscopebench.clauxel.com/",
+    "endpoint": "https://evalscopebench.clauxel.com/mcp",
+    "serverCard": "https://evalscopebench.clauxel.com/.well-known/mcp/server-card.json",
+    "registryName": "com.clauxel.evalscopebench/evalscopebench-mcp",
+    "tools": [
+      "run_benchmark_gate",
+      "compare_model_scores",
+      "read_benchmark_report",
+      "issue_benchmark_receipt"
+    ],
+    "docsRepo": "evalscope-benchmark-mcp-mcp",
+    "docs": "https://github.com/clauxel/evalscope-benchmark-mcp-mcp",
+    "packageName": "@clauxel/evalscopebench-mcp",
+    "directoryName": "evalscopebench-mcp",
+    "category": "Testing",
+    "tagline": "Hosted MCP for AI SDK benchmark dashboard.",
+    "description": "EvalScope Benchmark MCP is a paid remote MCP endpoint for AI SDK benchmark dashboard. It exposes structured JSON tools, a public server card, token-based access, usage receipts, and audit-ready workflow evidence for AI agents and coding teams.",
+    "icon": "https://evalscopebench.clauxel.com/favicon.svg"
+  }
+}
